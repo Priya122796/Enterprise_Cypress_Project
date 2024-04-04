@@ -1,0 +1,14 @@
+node_modules/
+*.log
+
+allure-report/
+allure-results/
+package-lock.json
+
+
+cypress/fixtures/fakerdata.json
+cypress/videos/
+cypress/screenshots/
+.vscode/settings.json
+cypress/downloads/
+cypress/fixtures/Selectors.json

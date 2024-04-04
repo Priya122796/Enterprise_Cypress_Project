@@ -1,0 +1,69 @@
+{
+  "ClientUserData": {
+    "TypeOfClient":"******Claim Administrator&%!(&",
+    "Group":"******CareWorks&%!(&",
+    "TypeOfImplementation":"******All&%!(&",
+    "StatesWhereClientDoesBusiness":"******TN&%!(&",
+    "AdvaNetAccountManager":"******Maryann Manning"
+  },
+  "ClientInfo": {
+    "city":"******Nashville&%!(&",
+    "isActive":"******1&%!(&",
+    "isGroup":"******0&%!(&",
+    "clientName":"******ASC MASTER&%!(&",
+    "startDate":"******2013-08-11&%!(&",
+    "state":"******TN&%!(&",
+    "stateAbr":"******TN&%!(&",
+    "street":"******2501 MCGAVOCK PIKE, SUITE 802&%!(&",
+    "url":"******www.ascrisk.com&%!(&",
+    "zip":"******37214&%!(&",
+    "createdAt":"******1383935583078&%!(&",
+    "createdById":"******1023&%!(&",
+    "dateCreated":"******11/08/2013"
+  },
+  "ReferralInfo": {
+    "claim_Number":"******202364244&%!(&",
+    "client_Menu":"******Client: Amerisafe&%!(&",
+    "client":"******Amerisafe&%!(&",
+    "contract_Menu":"******Contracted Client: Medata&%!(&",
+    "contract":"******Medata&%!(&",
+    "claim_Menu":"******Claim Admin: Amerisafe&%!(&",
+    "claim":"******Amerisafe&%!(&",
+    "referral":"******JAMES TRACY"
+  },
+  "BillInfo": {
+    "bill_Id":"******8717955&%!(&",
+    "claim_Id":"******1156895&%!(&",
+    "referral_Select":"******Referral: 0057639-1724392-20231010-FL&%!(&",
+    "invoice_Select":"******Invoice: 3690798&%!(&",
+    "invoice":"******3690798&%!(&",
+    "client_Select":"******Client: Johns Eastern&%!(&",
+    "client_Name":"******Johns Eastern&%!(&",
+    "contract_Select":"******Contracted Client: CompIQ&%!(&",
+    "contract":"******CompIQ&%!(&",
+    "employee_Select":"******Carrier: City of Pe&%!(&",
+    "carrier":"******City of Pe&%!(&",
+    "claim_Select":"******Claim Admin: Johns Eastern&%!(&",
+    "claim":"******Johns Eastern&%!(&",
+    "bill_Charge_Id":"******24022294"
+  },
+  "InvoiceInfo": {
+    "invoice_Number":"******3693127&%!(&",
+    "provider_Select":"******Provider: FASTMED URGENT CARE PC&%!(&",
+    "referral_Select":"******Referral: 0014517-0252835-20231010-NC&%!(&",
+    "bill_Select":"******Bill: 2309233497WCTJ&%!(&",
+    "client_Select":"******Client: Sedgwick&%!(&",
+    "contract_Select":"******Contracted Client: Conduent&%!(&",
+    "claim_Select":"******Claim Admin: Sedgwick&%!(&",
+    "claim_Id":"******2309233497WCTJ&%!(&",
+    "bill_Id":"******8721465&%!(&",
+    "client_Name":"******Sedgwick&%!(&",
+    "contract_Name":"******Conduent&%!(&",
+    "claim_Name":"******Sedgwick"
+  },
+  "ProviderInfo": {
+    "provider_Id":"******25916&%!(&",
+    "provider_Name":"******Baptist Stress Unit&%!(&",
+    "bill_Id":"******104728"
+  }
+}

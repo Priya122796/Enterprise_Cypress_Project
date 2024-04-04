@@ -1,0 +1,409 @@
+cypress\e2e\ui\Non_Prod\1_Client\2.VerifyClientSummary.cy.js:
+     a.Client : 2. Verify Client Summary -> Verify the ability to 1.Update Client Information, 2. Client summary details
+            cy:xhr (!): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303338/results?api-version=7.0
+            cy:xhr (K): PATCH https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303338/results?api-version=7.0
+                        Status: 200
+        cy:command (K): clearAllLocalStorage
+        cy:command (K): clearAllCookies
+        cy:command (K): clearAllSessionStorage
+        cy:command (K): task	out, Login into App with Microsoft Credentials
+        cy:command (K): visit	https://****-***-dev02.*******.com
+         cons:warn (!): Google Maps JavaScript API has been loaded directly without a callback. This is not supported and can lead to race conditions and suboptimal performance. For supported loading patterns please see https://goo.gle/js-api-loading
+            cy:xhr (K): GET https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true
+                        Status: 200
+          cons:log (K): Angular is running in development mode.
+          cons:log (K): token type is:undefined
+        cy:command (K): task	out, Login into ****** account from your AAD tenant
+        cy:command (K): get	#logintag
+        cy:command (K): click
+        cy:command (K): task	out, Retrieve credentials from Keyvault Secret
+        cy:command (K): origin	https://login.microsoftonline.com/
+        cy:command (K): task	get_secret, {secret_name: KeyvaultSecretName, keyvault: https://keyvault_url-kv.vault.azure.net/}
+          cy:fetch (K): GET https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize
+                        Status: 200
+        cy:command (K): get	#idBtn_Back
+          cy:fetch (K): GET https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/v2.0/.well-known/openid-configuration
+                        Status: 200
+        cy:command (K): page load	--page loaded--
+        cy:command (K): assert	expected **<input#idBtn_Back.win-button.button-secondary.button.ext-button.secondary.ext-secondary>** to be **visible**
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize?client_id=0e0788ff-8c84-457a-bf33-30b03fc0a372&scope=openid%20profile%20offline_access&redirect_uri=https%3A%2F%2F****-***-dev02.*******.com%2F&client-request-id=d71af515-d14c-42ec-bf9c-a32c6c361ca9&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.37.0&client_info=1&code_challenge=OSFOWwlRerg4Uc82fhb130nFFI8vnE3kCMuQSpXCI2s&code_challenge_method=S256&nonce=0270cfda-8ab0-4a4f-b73b-a2437ba7b733&state=eyJpZCI6IjFmMGVlY2YyLTBkMzAtNGNhMi1iY2Q0LTY4NzU4NjBmMjY2ZSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D
+        cy:command (K): page load	--page loaded--
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize?client_id=0e0788ff-8c84-457a-bf33-30b03fc0a372&scope=openid%20profile%20offline_access&redirect_uri=https%3A%2F%2F****-***-dev02.*******.com%2F&client-request-id=d71af515-d14c-42ec-bf9c-a32c6c361ca9&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.37.0&client_info=1&code_challenge=OSFOWwlRerg4Uc82fhb130nFFI8vnE3kCMuQSpXCI2s&code_challenge_method=S256&nonce=0270cfda-8ab0-4a4f-b73b-a2437ba7b733&state=eyJpZCI6IjFmMGVlY2YyLTBkMzAtNGNhMi1iY2Q0LTY4NzU4NjBmMjY2ZSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&sso_reload=true
+            cy:xhr (K): GET https://autologon.microsoftazuread-sso.com/21dd4b96-0304-436c-add3-23f63e5fc806/winauth/sso?client-request-id=d71af515-d14c-42ec-bf9c-a32c6c361ca9&_=1701445321893
+                        Status: 200
+        cy:command (K): page load	--page loaded--
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/login
+            cy:xhr (K): POST https://login.microsoftonline.com/common/SAS/BeginAuth
+                        Status: 200
+        cy:command (K): get	div[role="heading"]
+        cy:command (K): assert	expected **<div#idDiv_SAOTCAS_Title.row.text-title>** to be **visible**
+        cy:command (K): invoke	.text()
+        cy:command (K): contains	Approve sign in request
+        cy:command (K): assert	expected **<div#idDiv_SAOTCAS_Title.row.text-title>** to be **visible**
+        cy:command (K): get	#idBtn_Back
+        cy:command (K): assert	expected **<input#idBtn_Back.win-button.button-secondary.button.ext-button.secondary.ext-secondary>** to be **visible**
+        cy:command (K): click
+        cy:command (K): page load	--page loaded--
+        cy:command (K): get	#otherTileText
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/reprocess?prompt=select_account&sosid=af87e222-4f5a-48f2-8080-110f23ba16b4&ctx=rQQIARAAlZHNa9NgAIeTdqtdca5MFBGFHaaIXdq3edMkKxRct7VNt-6zXZPCGG8-3iVp0sSk7dYexYMn2VFEEfS0naZe1It603mZXhR38yRDQQbKDh7s_gQvP3guv8PzREJ0HHJxcD1Ix0F6FGiA43mMKV7hGYpJcYiSMYQUBDKAWAEIcrQ3HIme-33x8-zHH9nXD56MWeyl7R0ypjebrp9OJJDaRpTrOZSqtQEdd5GHVGPdVrRG00NWXHHsxAuS3CfJ7yS5ExgFNAcUrCKKRzKgGMRgSuagTCGagZyMuB7Ar4Gh-YlWU6dPxvGMrnYUCGMPrdu90_tBV-sU3dqkwApmzi7lVyyJljqz5Wy91J1ozuXn9JKRNCR6EcyWJWauW2HmzKxdMiW6tiz4gp201Py0Md_wDVRNgZpY1CW45Mp0qqKJWUswHUOxV-pILFoSXDSwCDLPgqN0UlUZeZylAAQ9UZBVKKSqkKIhZqGWwgoP2L3gZcfVGoY60tOBDUsbcTC2jIa2hhRF8_0vQfJbkNjvIw_7zocD0SsXiBHi2lUQTIfDkShxQsd95OP-nu4PT1ffvb-xWnqO7x7YnzLEXn-itqROJaHkdbwVFktqrLq5KXSFLpdI1iZ1aLY4vhBTNm4yOFXKcOnkVojcCp3dCw3Zfi-C6cdlz9nwNe9XKHDnFPlq4H_y3YuQO5FYvcPqaqOqV4yGuFldKOqphZLJw6lWbq0MlPFUa6ZAiVq94nWmdyPkrdODYWJ4YODRthm9fXRQeDNIHJ95-_Dlnzf7f38WDofGElLXbE-4es6ZrINyYRnQ4kzTEdvzuRI3IyQ7G3laznvO-hLvZ3ajxD81
+        cy:command (K): click
+        cy:command (K): get	input[type="email"]
+        cy:command (K): get	input[data-report-event="Signin_Submit"]
+        cy:command (K): click
+            cy:xhr (K): POST https://login.microsoftonline.com/common/GetCredentialType?mkt=en-US
+                        Status: 200
+        cy:command (K): contains	Enter password
+        cy:command (K): assert	expected **<div>** to be **visible**
+            cy:xhr (K): GET https://autologon.microsoftazuread-sso.com/xxxxx.com/winauth/sso?client-request-id=d71af515-d14c-42ec-bf9c-a32c6c361ca9&_=1701445329188
+                        Status: 200
+        cy:command (K): page load	--page loaded--
+            cy:xhr (K): POST https://login.microsoftonline.com/common/instrumentation/dssostatus
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/login
+        cy:command (K): get	input[type="password"]
+        cy:command (K): assert	expected **<input#i0118.form-control.input.ext-input.text-box.ext-text-box>** to be **visible**
+        cy:command (K): get	input[data-report-event="Signin_Submit"]
+        cy:command (K): click
+        cy:command (K): page load	--page loaded--
+            cy:xhr (K): GET https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true
+                        Status: 200
+          cy:fetch (K): GET https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize
+                        Status: 200
+          cy:fetch (K): GET https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/v2.0/.well-known/openid-configuration
+                        Status: 200
+        cy:command (K): new url	https://****-***-dev02.*******.com/#/
+        cy:command (K): task	out, Check the landing screen based on the user's role
+        cy:command (K): url
+        cy:command (K): assert	expected **https://****-***-dev02.*******.com/#/** to be one of **[ Array(3) ]**
+                        Actual: 	"https://****-***-dev02.*******.com/#/"
+                        Expected: 	["https://****-***-dev02.*******.com/#/prospects/list","https://****-***-dev02.*******.com/#/providers/list","https://****-***-dev02.*******.com/#/"]
+          cy:fetch (K): POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/plans/108846/suites/145960/points?testcaseId=140398&api-version=5.1
+                        Status: 200
+          cy:fetch (K): GET https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize
+                        Status: 200
+      cy:intercept (K): Matcher: "**/*"
+        cy:command (K): get	#Clients
+        cy:command (K): assert	expected **<a#Clients>** to be **visible**
+            cy:xhr (K): POST https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/runs?api-version=7.0
+                        Status: 200
+          cy:fetch (K): GET https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/v2.0/.well-known/openid-configuration
+                        Status: 200
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303339/results?api-version=7.0
+                        Status: 200
+            cy:xhr (K): PATCH https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303339/results?api-version=7.0
+                        Status: 200
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/Config
+                        Status: 200
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/Config
+                        Status: 200
+        cy:command (K): new url	https://****-***-dev02.*******.com/#/prospects/list
+        cy:command (K): click	{force: true}
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:log (K): cypress-highlight: #Clients
+        cy:command (K): task	out, Confirm global client record search -  ElliottOphelia
+        cy:command (K): new url	https://****-***-dev02.*******.com/#/client/list
+        cy:command (K): get	#searchBox
+        cy:command (K): type	ElliottOphelia{enter}
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/tasks/tasknumbers
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/tasks/tasknumbers
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/providers/prospects/list?filter=providerName
+                        Status: 200
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:log (K): cypress-highlight: #searchBox
+        cy:command (K): get	#spinner
+        cy:command (K): assert	expected **#spinner** not to exist in the DOM
+                        Actual: 	"#spinner"
+                        Expected: 	"#spinner"
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/list?clientname=ElliottOphelia&sortBy=-dateCreated
+                        Status: 200
+        cy:command (K): contains	 Date Created
+        cy:command (K): assert	expected **<span.mat-header-value.ng-tns-c1267148319-21>** to be **visible**
+        cy:command (K): click
+            cy:log (K): cypress-highlight:  Date Created
+        cy:command (K): contains	ElliottOphelia
+        cy:command (K): click	{force: true}
+        cy:command (K): new url	https://****-***-dev02.*******.com/#/client/details/records
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:log (K): cypress-highlight: :nth-child(1) > .cdk-column-clientName > .mat-link > .mat-header-value
+        cy:command (K): contains	 Summary
+        cy:command (K): assert	expected **'<label>'** to contain text **'&nbsp;Summary&nbsp;'**
+                        Actual: 	" Summary "
+                        Expected: 	" Summary "
+            cy:log (K): cypress-highlight:  Summary
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/list?clientname=ElliottOphelia&_totalItems=1&sortBy=-dateCreated
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/static-dropdowns
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/dynamic-dropdowns
+                        Status: 200
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/plans/108846/suites/145960/points?testcaseId=144229&api-version=5.1
+                        Status: 200
+        cy:command (K): task	out, Confirm presence of mandatory client details
+        cy:command (K): get	#client-info-exp
+        cy:command (K): click
+            cy:xhr (K): POST https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/runs?api-version=7.0
+                        Status: 200
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303340/results?api-version=7.0
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/79527
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/summary/79527
+                        Status: 200
+            cy:xhr (K): PATCH https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303340/results?api-version=7.0
+                        Status: 200
+        cy:command (K): get	#ci-table > .component-main > .mar-bot-10 > :nth-child(1) > .component-div-child2
+        cy:command (K): assert	expected **<div.component-div-child2.com-label.ng-star-inserted>** to be **visible**
+        cy:command (K): assert	expected **<div.component-div-child2.com-label.ng-star-inserted>** to contain text **Elliott**
+        cy:command (X): dblclick
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/plans/108846/suites/145960/points?testcaseId=141406&api-version=5.1
+                        Status: 200
+            cy:xhr (K): POST https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/runs?api-version=7.0
+                        Status: 200
+            cy:log (K): Error name is :  CypressError
+            cy:log (K): Error message is Timed out retrying after 35050ms: `cy.dblclick()` failed because this element:
+                        `<div _ngcontent-ng-c3479438179="" class="component-div-child2 com-label ng-star-inserted">Elliott...</div>`
+                        
+                        is being covered by another element:
+                        
+                        `<div _ngcontent-ng-c365850213="" class="mat-right">...</div>`
+                        
+                        Fix this problem, or use {force: true} to disable error checking.
+                        
+                        https://on.cypress.io/element-cannot-be-interacted-with
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303341/results?api-version=7.0
+
+
+
+cypress\e2e\ui\Non_Prod\1_Client\3.VerifyUploadDocument.cy.js:
+     a.Client : 3. Verify Upload Document In Client Summary -> Verify the ability to 1.Search client record created , 2.Upload Documents in Client summary
+        cy:command (K): clearAllLocalStorage
+        cy:command (K): clearAllCookies
+        cy:command (K): clearAllSessionStorage
+        cy:command (K): task	out, Login into App with Microsoft Credentials
+        cy:command (K): visit	https://****-***-dev02.*******.com
+         cons:warn (!): Google Maps JavaScript API has been loaded directly without a callback. This is not supported and can lead to race conditions and suboptimal performance. For supported loading patterns please see https://goo.gle/js-api-loading
+            cy:xhr (K): GET https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true
+                        Status: 200
+          cons:log (K): Angular is running in development mode.
+          cons:log (K): token type is:undefined
+        cy:command (K): task	out, Login into ****** account from your AAD tenant
+        cy:command (K): get	#logintag
+        cy:command (K): click
+          cy:fetch (K): GET https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize
+                        Status: 200
+        cy:command (K): task	out, Retrieve credentials from Keyvault Secret
+        cy:command (K): origin	https://login.microsoftonline.com/
+          cy:fetch (K): GET https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/v2.0/.well-known/openid-configuration
+                        Status: 200
+        cy:command (K): task	get_secret, {secret_name: KeyvaultSecretName, keyvault: https://keyvault_url-kv.vault.azure.net/}
+        cy:command (K): page load	--page loaded--
+        cy:command (K): get	#idBtn_Back
+        cy:command (K): assert	expected **<input#idBtn_Back.win-button.button-secondary.button.ext-button.secondary.ext-secondary>** to be **visible**
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize?client_id=0e0788ff-8c84-457a-bf33-30b03fc0a372&scope=openid%20profile%20offline_access&redirect_uri=https%3A%2F%2F****-***-dev02.*******.com%2F&client-request-id=6caa4aa2-7150-494b-95e1-2595c6e2513e&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.37.0&client_info=1&code_challenge=pyLyvLhX9SpBPHIAVDvLzxbShqWRApmMpyjgQBmnM7M&code_challenge_method=S256&nonce=97eb61f5-74ad-46d3-9c92-9a5846d344ee&state=eyJpZCI6ImU1ZWJlNjEwLTg4NTktNGQ0Ny1iYmZiLWQ1YTA3NzhmMjBkOCIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D
+        cy:command (K): page load	--page loaded--
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize?client_id=0e0788ff-8c84-457a-bf33-30b03fc0a372&scope=openid%20profile%20offline_access&redirect_uri=https%3A%2F%2F****-***-dev02.*******.com%2F&client-request-id=6caa4aa2-7150-494b-95e1-2595c6e2513e&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.37.0&client_info=1&code_challenge=pyLyvLhX9SpBPHIAVDvLzxbShqWRApmMpyjgQBmnM7M&code_challenge_method=S256&nonce=97eb61f5-74ad-46d3-9c92-9a5846d344ee&state=eyJpZCI6ImU1ZWJlNjEwLTg4NTktNGQ0Ny1iYmZiLWQ1YTA3NzhmMjBkOCIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&sso_reload=true
+            cy:xhr (K): GET https://autologon.microsoftazuread-sso.com/21dd4b96-0304-436c-add3-23f63e5fc806/winauth/sso?client-request-id=6caa4aa2-7150-494b-95e1-2595c6e2513e&_=1701445577294
+                        Status: 200
+        cy:command (K): page load	--page loaded--
+            cy:xhr (K): POST https://login.microsoftonline.com/common/instrumentation/dssostatus
+                        Status: 200
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/login
+            cy:xhr (K): POST https://login.microsoftonline.com/common/SAS/BeginAuth
+                        Status: 200
+        cy:command (K): get	div[role="heading"]
+        cy:command (K): assert	expected **<div#idDiv_SAOTCAS_Title.row.text-title>** to be **visible**
+        cy:command (K): invoke	.text()
+        cy:command (K): contains	Approve sign in request
+        cy:command (K): assert	expected **<div#idDiv_SAOTCAS_Title.row.text-title>** to be **visible**
+        cy:command (K): get	#idBtn_Back
+        cy:command (K): assert	expected **<input#idBtn_Back.win-button.button-secondary.button.ext-button.secondary.ext-secondary>** to be **visible**
+        cy:command (K): click
+        cy:command (K): page load	--page loaded--
+        cy:command (K): get	#otherTileText
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/reprocess?prompt=select_account&sosid=0913131c-2405-4aff-9531-cc543e23a5ec&ctx=rQQIARAAlZHNa9NgAMaTdqtdca4oiBdhh03EmvZN3iRNCxPata5fS9e1W5te5E3ypk2TNFnSDzcvIoJehF0G6kl2kl4cgiB68eShethR9OROMhB0px0U7P4ELw88l4cfvycUYKIwHgU3_EwUJBcABnFB0DRKUASWYrk4omQNQgoCGUBNAQjGGfdiKLxfGJlrW8X83vfFvY9HlVsjMtLu9RwvGYshdYAox7UpFQ8AE3WQi1S9ZSm423ORGVVsK_aWJA9J8gdJjnwLiTiWeVrjqDiLVIrlVUgllARDJRAnnDWWxfirb66c6vfazFnYrr6DT3xBzUUtazL63O_g7YLTXM7zeWuDbtYLptjJDku1FivWjJ64UgHiNq1LVlMv1Su0VEtBcadtrXbSRnk57-Ut2lRXsnq56-mozoFmo9CW4LojM9wGbqTNfMfWFWvTQI2CKcGKrjXA0mv_AkOrKisneApAMBEFeYVC6oSdgRoPMacpAuDH_qu2g7u6Oj_Roekmnrc1zdS7-A5SFOx5X_zkkZ84nCKPpy4HfeHFK8Q8cf0a8CeDwVCYOGunU-T-9ET3vb_vFz37Se4-ffD7lQGJ8XSsOwFw-y1RvWuCvlpl11rVGOzCDIiUYEYtb9tDuYwGqc7y7dUlNknvBsjdwKVxYM7yJid0vKjs2kMPu78CvsfnyHcz_3Pf0xA5CkVSSJUKGzA7MAuNYo7xrK7s9NKilK2hHGy4ZrXNbBp1xljfkg5C5IPzs0Hi4sxM49Hnlw9PvuU-zBKnF158evZmfPjnZ-547ma1RBc9TRkO9MFanWu6QjNTykTAVopfWZXS4nq5FMsnstViv2YsHYSJfw2
+        cy:command (K): click
+        cy:command (K): get	input[type="email"]
+        cy:command (K): get	input[data-report-event="Signin_Submit"]
+        cy:command (K): click
+        cy:command (K): contains	Enter password
+        cy:command (K): assert	expected **<div>** to be **visible**
+            cy:xhr (K): POST https://login.microsoftonline.com/common/GetCredentialType?mkt=en-US
+                        Status: 200
+            cy:xhr (K): POST https://browser.events.data.microsoft.com/OneCollector/1.0/?cors=true&content-type=application/x-json-stream&w=0
+                        Status: 200
+            cy:xhr (K): GET https://autologon.microsoftazuread-sso.com/xxxxx.com/winauth/sso?client-request-id=6caa4aa2-7150-494b-95e1-2595c6e2513e&_=1701445587258
+                        Status: 200
+        cy:command (K): page load	--page loaded--
+            cy:xhr (K): POST https://login.microsoftonline.com/common/instrumentation/dssostatus
+        cy:command (K): new url	https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/login
+        cy:command (K): get	input[type="password"]
+        cy:command (K): assert	expected **<input#i0118.form-control.input.ext-input.text-box.ext-text-box>** to be **visible**
+        cy:command (K): get	input[data-report-event="Signin_Submit"]
+        cy:command (K): click
+        cy:command (K): page load	--page loaded--
+            cy:xhr (K): GET https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true
+                        Status: 200
+        cy:command (K): new url	https://****-***-dev02.*******.com/#/
+          cy:fetch (K): GET https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize
+                        Status: 200
+        cy:command (K): task	out, Check the landing screen based on the user's role
+        cy:command (K): url
+        cy:command (K): assert	expected **https://****-***-dev02.*******.com/#/** to be one of **[ Array(3) ]**
+                        Actual: 	"https://****-***-dev02.*******.com/#/"
+                        Expected: 	["https://****-***-dev02.*******.com/#/prospects/list","https://****-***-dev02.*******.com/#/providers/list","https://****-***-dev02.*******.com/#/"]
+          cy:fetch (K): GET https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/v2.0/.well-known/openid-configuration
+                        Status: 200
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/plans/108846/suites/145960/points?testcaseId=140398&api-version=5.1
+                        Status: 200
+      cy:intercept (K): Matcher: "**/*"
+          cy:fetch (K): POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+        cy:command (K): get	#Clients
+        cy:command (K): assert	expected **<a#Clients>** to be **visible**
+            cy:xhr (K): POST https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/runs?api-version=7.0
+                        Status: 200
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303354/results?api-version=7.0
+                        Status: 200
+            cy:xhr (K): PATCH https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303354/results?api-version=7.0
+                        Status: 200
+          cy:fetch (K): (allApiReq) GET https://login.microsoftonline.com/common/discovery/instance?api-version=1.1&authorization_endpoint=https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/authorize
+                        Status: 200
+          cy:fetch (K): GET https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/v2.0/.well-known/openid-configuration
+                        Status: 200
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/Config
+                        Status: 200
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/Config
+                        Status: 200
+        cy:command (K): new url	https://****-***-dev02.*******.com/#/prospects/list
+        cy:command (K): click	{force: true}
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:log (K): cypress-highlight: #Clients
+        cy:command (K): task	out, Confirm global client record search -  ElliottOphelia
+        cy:command (K): new url	https://****-***-dev02.*******.com/#/client/list
+        cy:command (K): get	#searchBox
+        cy:command (K): type	ElliottOphelia{enter}
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/tasks/tasknumbers
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/tasks/tasknumbers
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/providers/prospects/list?filter=providerName
+                        Status: 200
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:log (K): cypress-highlight: #searchBox
+        cy:command (K): get	#spinner
+        cy:command (K): assert	expected **#spinner** not to exist in the DOM
+                        Actual: 	"#spinner"
+                        Expected: 	"#spinner"
+        cy:command (K): contains	 Date Created
+        cy:command (K): assert	expected **<span.mat-header-value.ng-tns-c1267148319-21>** to be **visible**
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/list?clientname=ElliottOphelia&sortBy=-dateCreated
+                        Status: 200
+        cy:command (K): click
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:log (K): cypress-highlight:  Date Created
+        cy:command (K): contains	ElliottOphelia
+        cy:command (K): click	{force: true}
+        cy:command (K): new url	https://****-***-dev02.*******.com/#/client/details/records
+            cy:log (K): cypress-highlight: :nth-child(1) > .cdk-column-clientName > .mat-link > .mat-header-value
+        cy:command (K): contains	 Summary
+        cy:command (K): assert	expected **'<label>'** to contain text **'&nbsp;Summary&nbsp;'**
+                        Actual: 	" Summary "
+                        Expected: 	" Summary "
+            cy:log (K): cypress-highlight:  Summary
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/plans/108846/suites/145960/points?testcaseId=144229&api-version=5.1
+                        Status: 200
+        cy:command (K): get	[href="#/client/details/instructions"]
+        cy:command (K): click
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/list?clientname=ElliottOphelia&_totalItems=1&sortBy=-dateCreated
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/static-dropdowns
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/dynamic-dropdowns
+                        Status: 200
+        cy:command (K): new url	https://****-***-dev02.*******.com/#/client/details/instructions
+      cy:intercept (K): Matcher: "https://api-dev02.*******.com/**********-****//jaxrs/clientdocs/instructions/*"
+            cy:xhr (K): POST https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/runs?api-version=7.0
+                        Status: 200
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303355/results?api-version=7.0
+                        Status: 200
+            cy:log (K): Wait till Instruction api call gets completed
+        cy:command (K): wait	[@allApiReq], {timeout: 20000}
+        cy:command (K): get	#spinner
+        cy:command (K): assert	expected **#spinner** not to exist in the DOM
+                        Actual: 	"#spinner"
+                        Expected: 	"#spinner"
+            cy:xhr (K): PATCH https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303355/results?api-version=7.0
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/79527
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clients/summary/79527
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clientdocs/instructions/79527
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clientdocs/tags/client
+                        Status: 200
+        cy:command (K): wait	[@apiRequest2, @allApiReq], {timeout: 20000}
+        cy:command (K): contains	Upload
+        cy:command (K): click
+        cy:command (K): task	out, Confirm searching and adding instruction tag
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/plans/108846/suites/145960/points?testcaseId=141322&api-version=5.1
+                        Status: 200
+        cy:command (K): get	#select-document-upload
+        cy:command (K): click
+            cy:xhr (K): POST https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/runs?api-version=7.0
+                        Status: 200
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303356/results?api-version=7.0
+                        Status: 200
+            cy:xhr (K): PATCH https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/Runs/1303356/results?api-version=7.0
+                        Status: 200
+        cy:command (K): wait	[@allApiReq], {timeout: 20000}
+        cy:command (K): get	body
+        cy:command (K): type	{enter}{esc}
+        cy:command (K): get	#file
+        cy:command (K): contains	Save
+        cy:command (K): click	{force: true}
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+        cy:command (K): contains	Success:instruction_Doc.xlsx
+        cy:command (K): assert	expected **<div.mat-mdc-snack-bar-label.mdc-snackbar__label>** to exist in the DOM
+                        Actual: 	"<div.mat-mdc-snack-bar-label.mdc-snackbar__label>"
+                        Expected: 	"<div.mat-mdc-snack-bar-label.mdc-snackbar__label>"
+            cy:xhr (K): POST https://api-dev02.*******.com/**********-****/jaxrs/clientdocs/instructions/79527/upload/multipart
+                        Status: 200
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+        cy:command (K): contains	Cancel
+        cy:command (K): click	{force: true}
+            cy:xhr (K): PUT https://api-dev02.*******.com/**********-****/jaxrs/clientdocs/tags/852974
+                        Status: 200
+        cy:command (K): get	.mat-link > .mat-header-value
+        cy:command (X): assert	expected **[ <span.mat-header-value>, 2 more... ]** to have text **instruction_Doc.xlsx**, but the text was **instruction_Doc.xlsxinstruction_Doc.xlsxinstruction_Doc.xlsx**
+          cy:fetch (K): (allApiReq) POST https://login.microsoftonline.com/21dd4b96-0304-436c-add3-23f63e5fc806/oauth2/v2.0/token
+                        Status: 200
+            cy:xhr (K): GET https://api-dev02.*******.com/**********-****/jaxrs/clientdocs/instructions/79527
+                        Status: 200
+            cy:xhr (K): GET https://paradigmoutcomes.visualstudio.com/Network%20and%20Operations/_apis/test/plans/108846/suites/145960/points?testcaseId=141322&api-version=5.1
+            cy:log (K): Error name is :  AssertionError
+            cy:log (K): Error message is Timed out retrying after 35000ms: expected '[ <span.mat-header-value>, 2 more... ]' to have text 'instruction_Doc.xlsx', but the text was 'instruction_Doc.xlsxinstruction_Doc.xlsxinstruction_Doc.xlsx'
+

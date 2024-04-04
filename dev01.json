@@ -1,0 +1,11 @@
+{
+  "env": {
+    "baseUrl": "https://****-***-dev01.*******.com",
+    "apiUrl": "https://api-dev01.*******.com",
+    "environment": "dev01",
+    "secret_name": "KeyvaultSecretName",
+    "user_Name": "KeyvaultSecretName@xxxxx.com",
+    "allure": "true",
+    "keyvault_Url": "https://keyvault_url-kv.vault.azure.net/"
+  }
+}

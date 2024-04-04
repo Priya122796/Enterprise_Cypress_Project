@@ -1,0 +1,64 @@
+{
+  "ClientUserData": {
+    "TypeOfClient":"******Claim Administrator&%!(&",
+    "Group":"******CareWorks&%!(&",
+    "TypeOfImplementation":"******All&%!(&",
+    "StatesWhereClientDoesBusiness":"******TN&%!(&",
+    "AdvaNetAccountManager":"******Maryann Manning"
+  },
+  "ClientInfo": {
+    "city":"******Glenview&%!(&",
+    "isActive":"******1&%!(&",
+    "isGroup":"******0&%!(&",
+    "clientName":"******QuinnLucas&%!(&",
+    "startDate":"******2013-08-11&%!(&",
+    "state":"******CA&%!(&",
+    "stateAbr":"******TN&%!(&",
+    "street":"******Dawson Mill&%!(&",
+    "url":"******www.ascrisk.com&%!(&",
+    "zip":"******16648&%!(&",
+    "createdAt":"******1383935583078&%!(&",
+    "createdById":"******1023&%!(&",
+    "dateCreated":"******11/08/2013"
+  },
+  "ReferralInfo": {
+    "claim_Number":"******220220&%!(&",
+    "client_Menu":"******Client: RobinCrawford&%!(&",
+    "client":"******RobinCrawford&%!(&",
+    "contract_Menu":"******Contracted Client: RobinCrawford&%!(&",
+    "claim_Menu":"******Claim Admin: ABC NH WORKERS COMP SELF INSURED TRUST&%!(&",
+    "claim":"******ABC NH WORKERS COMP SELF INSURED TRUST"
+  },
+  "BillInfo": {
+    "bill_Id":"******4650972&%!(&",
+    "claim_Id":"******96001742&%!(&",
+    "referral_Select":"******Referral: 0000006-0000021-20131306-CA&%!(&",
+    "invoice_Select":"******Invoice: 1964855&%!(&",
+    "invoice":"******1964855&%!(&",
+    "client_Select":"******Client: Macy's Corporate Services&%!(&",
+    "client_Name":"******Macy's Corporate Services&%!(&",
+    "contract_Select":"******Contracted Client: Macy's Corporate Services&%!(&",
+    "employee_Select":"******Employed/Insured: Macy's Corporate Services&%!(&",
+    "claim_Select":"******Claim Admin: Macy's Corporate Services&%!(&",
+    "bill_Charge_Id":"******12684695"
+  },
+  "InvoiceInfo": {
+    "invoice_Number":"******998705&%!(&",
+    "provider_Select":"******Provider: RYAN MONACO PHYSICAL THERAPY PLLC&%!(&",
+    "referral_Select":"******Referral: 0011105-0510211-20192511-NY&%!(&",
+    "bill_Select":"******Bill: W002078757&%!(&",
+    "client_Select":"******Client: PMA Insurance Group&%!(&",
+    "contract_Select":"******Contracted Client: Conduent&%!(&",
+    "claim_Select":"******Claim Admin: PMA Insurance Group&%!(&",
+    "claim_Id":"******W002078757&%!(&",
+    "bill_Id":"******2072864&%!(&",
+    "client_Name":"******PMA Insurance Group&%!(&",
+    "contract_Name":"******Conduent&%!(&",
+    "claim_Name":"******PMA Insurance Group"
+  },
+  "ProviderInfo": {
+    "provider_Id":"******2176867&%!(&",
+    "provider_Name":"******Abigail Skallerud&%!(&",
+    "bill_Id":"******4650924"
+  }
+}

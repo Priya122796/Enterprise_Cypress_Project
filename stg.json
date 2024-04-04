@@ -1,0 +1,11 @@
+{
+  "env": {
+    "baseUrl": "https://****-***-stg.*******.com",
+    "apiUrl": "https://api-stg.*******.com",
+    "environment": "stg",
+    "secret_name": "KeyvaultSecretName",
+    "user_Name": "KeyvaultSecretName@xxxxx.com",
+    "allure": "true",
+    "keyvault_Url": "https://keyvault_url-kv.vault.azure.net/"
+  }
+}

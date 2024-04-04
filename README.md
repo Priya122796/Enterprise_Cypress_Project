@@ -1,5 +1,5 @@
 * Author : Nifaanya Priya 
-* Email : nifa121196@gmail 
+* Email : nifa121196@gmail.com 
 * Profile : https://www.linkedin.com/in/nifaanya-priya-qa/
 
 # Introduction
@@ -17,7 +17,13 @@
 * Integrated fake data creator with Auto generation of Testdata for each scenario
 * Scripts covers for these environments : Dev,QA,Staging and production 
 
-# E2E Automation Project Prerequisite
+
+# Pipeline Email Report after CID execution
+
+![alt text](image-1.png)
+
+
+# E2E Automation Project Prerequisites
 
 1. Install NodeJS - https://nodejs.org/en/download/
 2. Install Visual Studio Code - https://code.visualstudio.com/

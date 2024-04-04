@@ -1,0 +1,11 @@
+{
+  "env": {
+    "baseUrl": "https://****-***.*******.com",
+    "apiUrl": "https://api.*******.com/",
+    "environment": "prod",
+    "secret_name": "prodKeyvault",
+    "user_Name": "prodKeyvault@xxxxx.com",
+    "allure": "true",
+    "keyvault_Url": "https://ProdKv_url-kv.vault.azure.net/"
+  }
+}
