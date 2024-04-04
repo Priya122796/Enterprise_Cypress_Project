@@ -18,9 +18,13 @@
 * Scripts covers for these environments : Dev,QA,Staging and production 
 
 
-# Pipeline Email Report after CID execution
+# Allure report with Screenshot and videos attached to the Pipeline and  Email
+![alt text](image-2.png)
+
+# Pipeline Email Report after CI/CD execution
 
 ![alt text](image-1.png)
+
 
 
 # E2E Automation Project Prerequisites
@@ -40,7 +44,6 @@
 * az -v
 
 
-
 # Get access to Azure Key Vault
 
 * Create ticket to get readonly (Azure KV NP Read Access) access to the keyvault 
@@ -50,7 +53,6 @@
 * TODO:// Where to get it? from dev and Pipeline - C:\DevTools\certs
 * setx NODE_EXTRA_CA_CERTS "add pem certificate"
 * az login
-
 
 
 # Verify the keyvault access
